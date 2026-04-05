@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahi Bhoj Thali – Authentic Royal Thali | Aurangabad</title>
+<meta name="description" content="Shahi Bhoj Thali Restaurant Aurangabad – Unlimited Rajasthani, Gujarati & Maharashtrian Thali. Pure Veg. Near Inox Fame Tapadia, CIDCO N-1.">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --saffron:#FF6600;--saffron-d:#cc5200;--saffron-l:#ff8533;
+  --maroon:#8B0000;--maroon-l:#b30000;
+  --gold:#D4AF37;--gold-l:#e8c84a;--gold-dk:#a8891d;
+  --green:#138808;--green-l:#1aaa0a;
+  --ivory:#FFF8F0;--cream:#FFF0DC;--warm:#FFE4BC;
+  --brown:#5C2E00;--brown-l:#7a3d00;
+  --text:#2C1500;--text-m:#6B3A00;--text-lt:#A0622A;
+  --border:rgba(139,0,0,.13);--card:#FFFFFF;
+  --ff-head:'Yatra One',cursive;
+  --ff-sub:'Playfair Display',serif;
+  --ff-body:'Hind',sans-serif;
+  --nav-h:70px;--rad:8px;--tr:.35s ease;
+  --shadow:0 4px 20px rgba(139,0,0,.10);
+  --shadow-lg:0 12px 40px rgba(139,0,0,.16);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);background:var(--ivory);color:var(--text);overflow-x:hidden;line-height:1.7}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:var(--ff-body);border:none;background:none}
+ul{list-style:none}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--saffron);border-radius:3px}
+
+/* UTILS */
+.container{max-width:1160px;margin:0 auto;padding:0 20px}
+.section{padding:80px 0}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--saffron);display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.section-label::before,.section-label::after{content:'';height:1.5px;width:22px;background:var(--saffron)}
+.section-label.left::before{display:none}
+.section-title{font-family:var(--ff-head);font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.2;margin-bottom:14px;color:var(--text)}
+.section-title em{font-style:italic;font-family:var(--ff-sub);color:var(--saffron)}
+.section-sub{font-family:var(--ff-sub);font-size:1.08rem;color:var(--text-m);max-width:520px;line-height:1.7}
+.text-center{text-align:center}.text-center .section-sub{margin:0 auto}
+.divider{width:56px;height:3px;background:linear-gradient(90deg,var(--saffron),var(--gold));border-radius:2px;margin:14px 0}
+.divider.center{margin:14px auto}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 28px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;transition:var(--tr);cursor:pointer;border:none;font-family:var(--ff-body)}
+.btn-primary{background:var(--saffron);color:#fff;box-shadow:0 4px 16px rgba(255,102,0,.3)}
+.btn-primary:hover{background:var(--saffron-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,102,0,.4)}
+.btn-outline{background:transparent;color:var(--saffron);border:2px solid var(--saffron)}
+.btn-outline:hover{background:var(--saffron);color:#fff;transform:translateY(-2px)}
+.btn-maroon{background:var(--maroon);color:#fff;box-shadow:0 4px 16px rgba(139,0,0,.3)}
+.btn-maroon:hover{background:var(--maroon-l);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--text);box-shadow:0 4px 16px rgba(212,175,55,.3)}
+.btn-gold:hover{background:var(--gold-l);transform:translateY(-2px)}
+/* REVEALS */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal-l{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-l.visible{opacity:1;transform:none}
+.reveal-r{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-r.visible{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* NAV */
+#navbar{position:fixed;top:0;left:0;right:0;z-index:900;height:var(--nav-h);display:flex;align-items:center;transition:background .4s,box-shadow .4s}
+#navbar.scrolled{background:rgba(255,248,240,.97);backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(139,0,0,.1)}
+.nav-inner{width:100%;max-width:1160px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo-main{font-family:var(--ff-head);font-size:1.5rem;color:var(--saffron);line-height:1}
+.nav-logo-sub{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--text-lt)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-m);transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:var(--saffron);border-radius:1px;transform:scaleX(0);transition:transform .3s}
+.nav-links a:hover,.nav-links a.active{color:var(--saffron)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-cart{position:relative;color:var(--text-m);font-size:1.1rem;transition:color .3s;padding:4px}
+.nav-cart:hover{color:var(--saffron)}
+.cart-badge{position:absolute;top:-5px;right:-5px;background:var(--maroon);color:#fff;font-size:9px;font-weight:700;width:17px;height:17px;border-radius:50%;display:none;align-items:center;justify-content:center}
+.cart-badge.show{display:flex}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:4px}
+.hamburger span{width:23px;height:2px;background:var(--text);border-radius:2px;transition:var(--tr)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#mob-menu{position:fixed;top:var(--nav-h);left:0;right:0;background:rgba(255,248,240,.98);backdrop-filter:blur(16px);z-index:899;padding:24px 20px 32px;transform:translateY(-110%);transition:transform .4s ease;border-bottom:2px solid var(--warm);box-shadow:0 8px 32px rgba(139,0,0,.1)}
+#mob-menu.open{transform:translateY(0)}
+#mob-menu a{display:block;font-family:var(--ff-head);font-size:1.6rem;color:var(--text);padding:10px 0;border-bottom:1px solid var(--border);transition:color .3s,padding-left .3s}
+#mob-menu a:hover{color:var(--saffron);padding-left:8px}
+#mob-menu .mob-res{margin-top:18px;display:inline-flex}
+
+/* PAGES */
+.page{display:none}.page.active{display:block}
+
+/* HERO */
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(135deg,#FFF3E0 0%,#FFE0B2 50%,#FFCCBC 100%)}
+.hero-mandala{position:absolute;top:-100px;right:-100px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(255,102,0,.08) 0%,rgba(212,175,55,.06) 40%,transparent 70%);pointer-events:none}
+.hero-mandala2{position:absolute;bottom:-150px;left:-150px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(19,136,8,.07) 0%,transparent 65%);pointer-events:none}
+.hero-dots-bg{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,102,0,.07) 1px,transparent 1px);background-size:30px 30px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;padding-top:var(--nav-h);width:100%;max-width:1160px;margin:0 auto;padding-left:20px;padding-right:20px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,102,0,.12);border:1.5px solid rgba(255,102,0,.3);border-radius:50px;padding:6px 16px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);margin-bottom:20px;animation:fadeUp .8s .2s both}
+.hero-veg-badge{display:inline-flex;align-items:center;gap:5px;background:#fff;border:2px solid var(--green);border-radius:4px;padding:4px 10px;font-size:11px;font-weight:700;color:var(--green);margin-left:8px}
+.hero-veg-dot{width:10px;height:10px;border-radius:50%;background:var(--green)}
+.hero-title{font-family:var(--ff-head);font-size:clamp(2.6rem,5vw,4rem);line-height:1.1;color:var(--text);margin-bottom:16px;animation:fadeUp .8s .4s both}
+.hero-title em{font-family:var(--ff-sub);font-style:italic;color:var(--saffron)}
+.hero-desc{font-family:var(--ff-sub);font-size:1.15rem;color:var(--text-m);max-width:440px;margin-bottom:30px;line-height:1.7;animation:fadeUp .8s .6s both}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp .8s .8s both}
+.hero-info-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;animation:fadeUp .8s 1s both}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--border);border-radius:50px;padding:6px 14px;font-size:.78rem;font-weight:700;color:var(--text-m);box-shadow:0 2px 8px rgba(139,0,0,.08)}
+.hero-pill i{color:var(--saffron)}
+.hero-visual{animation:fadeUp .8s .3s both}
+.hero-thali-card{background:#fff;border-radius:24px;padding:28px;box-shadow:var(--shadow-lg);text-align:center;border:2px solid var(--warm)}
+.thali-emoji{font-size:5rem;display:block;margin-bottom:12px;animation:spin 20s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.thali-card-title{font-family:var(--ff-head);font-size:1.5rem;color:var(--text);margin-bottom:6px}
+.thali-card-sub{font-size:.88rem;color:var(--text-lt);margin-bottom:12px}
+.thali-price-box{display:inline-flex;align-items:center;gap:8px;background:var(--saffron);color:#fff;border-radius:50px;padding:8px 20px}
+.thali-price{font-family:var(--ff-head);font-size:1.4rem}
+.thali-price-sub{font-size:.75rem;opacity:.85}
+.hero-items{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.hitem{display:flex;align-items:center;gap:10px;background:var(--ivory);border:1px solid var(--border);border-radius:12px;padding:10px 14px}
+.hitem-emoji{font-size:1.5rem;flex-shrink:0}
+.hitem-text{font-size:.82rem;font-weight:600;color:var(--text)}
+.hitem-price{font-size:.8rem;color:var(--saffron);font-weight:700;margin-left:auto}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* MARQUEE */
+.marquee-bar{background:var(--maroon);padding:11px 0;overflow:hidden;white-space:nowrap}
+.marquee-inner{display:inline-flex;animation:mq 30s linear infinite}
+.m-item{font-family:var(--ff-sub);font-style:italic;font-size:.9rem;color:#fff;padding:0 26px;display:inline-flex;align-items:center;gap:8px}
+.m-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* FEATURES */
+.feat-bar{background:var(--saffron);padding:44px 0}
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.feat-item{display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 14px;border-right:1px solid rgba(255,255,255,.2);transition:background .3s}
+.feat-item:last-child{border-right:none}
+.feat-item:hover{background:rgba(255,255,255,.1)}
+.feat-icon{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#fff;margin-bottom:10px}
+.feat-title{font-family:var(--ff-head);font-size:.95rem;color:#fff;margin-bottom:3px}
+.feat-desc{font-size:.74rem;color:rgba(255,255,255,.8)}
+
+/* THALI SECTION */
+.thali-section{background:var(--cream)}
+.thali-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.thali-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1.5px solid var(--border);transition:transform .4s,box-shadow .4s;cursor:pointer}
+.thali-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.thali-img{height:190px;display:flex;align-items:center;justify-content:center;font-size:4.5rem;position:relative}
+.thali-tag{position:absolute;top:12px;right:12px;background:var(--saffron);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:50px}
+.thali-tag.veg{background:var(--green)}
+.thali-tag.new{background:var(--maroon)}
+.thali-body{padding:16px}
+.thali-cat{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--saffron);margin-bottom:5px}
+.thali-name{font-family:var(--ff-head);font-size:1.1rem;color:var(--text);margin-bottom:5px}
+.thali-desc{font-size:.79rem;color:var(--text-lt);line-height:1.5;margin-bottom:14px}
+.thali-foot{display:flex;align-items:center;justify-content:space-between}
+.thali-price{font-family:var(--ff-sub);font-size:1.3rem;color:var(--saffron);font-weight:600}
+.thali-add{width:34px;height:34px;border-radius:50%;background:var(--saffron);color:#fff;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:var(--tr);box-shadow:0 3px 10px rgba(255,102,0,.3)}
+.thali-add:hover{background:var(--saffron-d);transform:scale(1.1) rotate(90deg)}
+
+/* ABOUT HOME */
+.about-home{background:var(--ivory)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about-visual{position:relative;height:500px}
+.av-main{position:absolute;top:0;left:0;width:76%;height:380px;border-radius:18px;background:linear-gradient(145deg,#FFE4CC,#FFD0A0);display:flex;align-items:center;justify-content:center;font-size:5.5rem;box-shadow:var(--shadow-lg)}
+.av-accent{position:absolute;bottom:0;right:0;width:54%;height:250px;border-radius:18px;background:linear-gradient(145deg,#FFE8D0,#FFCFA0);display:flex;align-items:center;justify-content:center;font-size:3.8rem;box-shadow:var(--shadow);border:4px solid var(--ivory)}
+.av-badge{position:absolute;top:44%;left:60%;transform:translate(-50%,-50%);width:96px;height:96px;border-radius:50%;background:var(--saffron);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(255,102,0,.2),var(--shadow-lg);z-index:2}
+.av-badge-num{font-family:var(--ff-head);font-size:1.5rem;color:#fff;line-height:1}
+.av-badge-label{font-size:8px;font-weight:700;color:rgba(255,255,255,.9);text-align:center}
+.about-text p{font-family:var(--ff-sub);font-size:1.05rem;color:var(--text-m);line-height:1.8;margin-bottom:16px}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.stat-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:16px;transition:border-color .3s,transform .3s,box-shadow .3s;box-shadow:var(--shadow)}
+.stat-card:hover{border-color:var(--saffron);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.stat-num{font-family:var(--ff-head);font-size:1.9rem;color:var(--saffron);line-height:1}
+.stat-label{font-size:.73rem;color:var(--text-lt);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:2px}
+
+/* TESTIMONIALS */
+.testi-section{background:var(--cream)}
+.testi-slider{overflow:hidden;margin-top:48px}
+.testi-track{display:flex;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.testi-card{flex:0 0 calc(33.333% - 20px);margin-right:30px;background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s}
+.testi-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.testi-stars{color:var(--saffron);font-size:.85rem;letter-spacing:2px;margin-bottom:14px}
+.testi-text{font-family:var(--ff-sub);font-size:1.02rem;color:var(--text-m);line-height:1.7;font-style:italic;margin-bottom:18px}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:44px;height:44px;border-radius:50%;background:var(--saffron);display:flex;align-items:center;justify-content:center;font-family:var(--ff-head);font-size:1.1rem;color:#fff;flex-shrink:0}
+.testi-name{font-family:var(--ff-head);font-size:.95rem;color:var(--text)}
+.testi-role{font-size:.7rem;color:var(--text-lt);margin-top:2px}
+.slider-btns{display:flex;gap:10px;margin-top:28px}
+.sl-btn{width:44px;height:44px;border-radius:50%;border:2px solid var(--saffron);background:transparent;color:var(--saffron);font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:var(--tr);cursor:pointer}
+.sl-btn:hover{background:var(--saffron);color:#fff}
+
+/* NEWSLETTER */
+.newsletter{background:var(--maroon);padding:64px 0;position:relative;overflow:hidden}
+.newsletter::before{content:'';position:absolute;top:-30%;right:-80px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
+.nl-inner{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.nl-text .section-title{color:#fff}
+.nl-text .section-sub{color:rgba(255,255,255,.7)}
+.nl-text .section-label{color:rgba(255,255,255,.6)}
+.nl-text .section-label::before,.nl-text .section-label::after{background:rgba(255,255,255,.4)}
+.nl-row{display:flex}
+.nl-input{background:rgba(255,255,255,.15);border:1.5px solid rgba(255,255,255,.3);border-right:none;color:#fff;font-family:var(--ff-body);font-size:.88rem;padding:13px 18px;border-radius:50px 0 0 50px;width:260px;outline:none}
+.nl-input::placeholder{color:rgba(255,255,255,.5)}
+.nl-input:focus{border-color:rgba(255,255,255,.7)}
+.nl-btn{background:var(--saffron);color:#fff;border:none;padding:13px 22px;font-family:var(--ff-body);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:0 50px 50px 0;cursor:pointer;transition:background .3s}
+.nl-btn:hover{background:var(--saffron-d)}
+#nl-ok{display:none;color:rgba(255,255,255,.9);font-size:.83rem;margin-top:8px}
+
+/* PAGE HERO */
+.page-hero{min-height:300px;position:relative;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:44px;background:linear-gradient(135deg,#FFF3E0,#FFE0B2)}
+.ph-pattern{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,102,0,.1) 1px,transparent 1px);background-size:26px 26px}
+.ph-content{position:relative;z-index:2;padding-top:var(--nav-h)}
+.ph-content .section-title{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:0}
+
+/* MENU PAGE */
+.menu-tabs{display:flex;gap:6px;justify-content:center;padding:18px 16px;background:#fff;position:sticky;top:var(--nav-h);z-index:50;border-bottom:2px solid var(--warm);flex-wrap:wrap;box-shadow:0 2px 12px rgba(139,0,0,.06)}
+.mtab{background:none;border:2px solid var(--border);color:var(--text-m);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 18px;border-radius:50px;transition:var(--tr);cursor:pointer}
+.mtab:hover{border-color:var(--saffron);color:var(--saffron)}
+.mtab.active{background:var(--saffron);color:#fff;border-color:var(--saffron)}
+.menu-body{background:var(--ivory);padding-bottom:80px}
+.menu-sec-title{font-family:var(--ff-head);font-size:1.8rem;color:var(--saffron);margin:48px 0 22px;display:flex;align-items:center;gap:14px}
+.menu-sec-title::after{content:'';flex:1;height:2px;background:linear-gradient(90deg,var(--border),transparent)}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.menu-item{display:flex;gap:14px;background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:15px;transition:border-color .3s,transform .3s,box-shadow .3s;cursor:pointer;box-shadow:var(--shadow)}
+.menu-item:hover{border-color:var(--saffron);transform:translateX(4px);box-shadow:0 6px 22px rgba(255,102,0,.12)}
+.mi-emoji{width:66px;height:66px;flex-shrink:0;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:2.1rem;background:var(--cream)}
+.mi-info{flex:1}
+.mi-name{font-family:var(--ff-head);font-size:1rem;color:var(--text);margin-bottom:4px}
+.mi-badge{font-size:9px;background:var(--saffron);color:#fff;padding:2px 7px;border-radius:50px;font-weight:700;vertical-align:middle;margin-left:5px}
+.mi-badge.veg{background:var(--green)}.mi-badge.jain{background:#8B4513}.mi-badge.new{background:var(--maroon)}
+.mi-desc{font-size:.76rem;color:var(--text-lt);line-height:1.5;margin-bottom:9px}
+.mi-foot{display:flex;align-items:center;justify-content:space-between}
+.mi-price{font-family:var(--ff-sub);font-size:1.15rem;color:var(--saffron);font-weight:600}
+.mi-add{background:var(--saffron);border:none;color:#fff;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:50px;transition:var(--tr);cursor:pointer;font-family:var(--ff-body)}
+.mi-add:hover{background:var(--saffron-d)}
+
+/* ABOUT PAGE */
+.about-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.story-text p{font-family:var(--ff-sub);font-size:1.03rem;color:var(--text-m);line-height:1.85;margin-bottom:16px}
+.visual-block{height:440px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:7rem;background:linear-gradient(145deg,var(--warm),var(--cream));box-shadow:var(--shadow-lg);border:1.5px solid var(--border)}
+.chefs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px}
+.chef-card{background:#fff;border-radius:16px;overflow:hidden;border:1.5px solid var(--border);text-align:center;transition:transform .4s,box-shadow .4s;box-shadow:var(--shadow)}
+.chef-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg)}
+.chef-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:4.8rem;background:linear-gradient(145deg,var(--cream),var(--warm))}
+.chef-body{padding:18px}
+.chef-name{font-family:var(--ff-head);font-size:1.1rem;color:var(--text);margin-bottom:2px}
+.chef-title{font-size:.72rem;color:var(--saffron);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:9px}
+.chef-bio{font-size:.79rem;color:var(--text-lt);line-height:1.6}
+.vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.val-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:24px;transition:border-color .3s,transform .3s,box-shadow .3s;box-shadow:var(--shadow)}
+.val-card:hover{border-color:var(--saffron);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.val-icon{font-size:2rem;margin-bottom:10px}
+.val-title{font-family:var(--ff-head);font-size:1.05rem;color:var(--text);margin-bottom:7px}
+.val-text{font-size:.8rem;color:var(--text-lt);line-height:1.6}
+
+/* RESERVATION */
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.res-info p{font-family:var(--ff-sub);font-size:1.03rem;color:var(--text-m);line-height:1.8;margin-bottom:22px}
+.res-details{display:flex;flex-direction:column;gap:14px}
+.res-detail{display:flex;align-items:flex-start;gap:12px}
+.rd-icon{width:40px;height:40px;border-radius:50%;background:rgba(255,102,0,.1);display:flex;align-items:center;justify-content:center;color:var(--saffron);font-size:.9rem;flex-shrink:0}
+.rd-title{font-size:.8rem;font-weight:700;color:var(--text);margin-bottom:2px;text-transform:uppercase;letter-spacing:.05em}
+.rd-text{font-size:.78rem;color:var(--text-lt)}
+.res-form-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:34px;box-shadow:var(--shadow-lg)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group.full{grid-column:1/-1}
+.form-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-m)}
+.form-input,.form-select,.form-textarea{background:var(--ivory);border:1.5px solid var(--border);border-radius:10px;color:var(--text);font-family:var(--ff-body);font-size:.87rem;padding:11px 14px;outline:none;transition:border-color .3s;width:100%}
+.form-select{cursor:pointer}.form-select option{background:#fff}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--saffron)}
+.form-textarea{resize:vertical;min-height:88px}
+.form-submit{width:100%;margin-top:8px;padding:14px;font-size:12px;justify-content:center;border-radius:50px}
+.confirm-msg{display:none;text-align:center;padding:34px;flex-direction:column;align-items:center;gap:12px}
+.confirm-msg.show{display:flex}
+.confirm-icon{width:72px;height:72px;border-radius:50%;background:rgba(255,102,0,.1);border:2px solid var(--saffron);display:flex;align-items:center;justify-content:center;font-size:1.7rem;color:var(--saffron)}
+.confirm-title{font-family:var(--ff-head);font-size:1.4rem;color:var(--text)}
+.confirm-text{font-size:.85rem;color:var(--text-lt)}
+
+/* GALLERY */
+.gal-filter{display:flex;gap:7px;justify-content:center;padding:32px 0 18px;flex-wrap:wrap}
+.gfbtn{background:none;border:2px solid var(--border);color:var(--text-m);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 18px;border-radius:50px;transition:var(--tr);cursor:pointer}
+.gfbtn:hover{border-color:var(--saffron);color:var(--saffron)}
+.gfbtn.active{background:var(--saffron);color:#fff;border-color:var(--saffron)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:26px;padding-bottom:80px}
+.gal-item{border-radius:16px;overflow:hidden;position:relative;cursor:pointer;box-shadow:var(--shadow)}
+.gi-inner{min-height:190px;display:flex;align-items:center;justify-content:center;font-size:3.8rem;transition:transform .5s ease}
+.gal-item:nth-child(4) .gi-inner,.gal-item:nth-child(7) .gi-inner{min-height:400px}
+.gal-item:hover .gi-inner{transform:scale(1.06)}
+.gi-overlay{position:absolute;inset:0;background:rgba(44,21,0,0);display:flex;align-items:center;justify-content:center;transition:background .4s}
+.gal-item:hover .gi-overlay{background:rgba(44,21,0,.45)}
+.gi-icon{color:#fff;font-size:1.4rem;opacity:0;transform:scale(.8);transition:opacity .3s,transform .3s}
+.gal-item:hover .gi-icon{opacity:1;transform:scale(1)}
+
+/* CONTACT */
+.contact-wrap{padding-bottom:80px}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;padding-top:48px}
+.c-cards{display:flex;flex-direction:column;gap:14px}
+.c-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:18px;display:flex;align-items:flex-start;gap:14px;transition:border-color .3s,transform .3s,box-shadow .3s;box-shadow:var(--shadow)}
+.c-card:hover{border-color:var(--saffron);transform:translateX(4px);box-shadow:var(--shadow-lg)}
+.c-icon{width:44px;height:44px;border-radius:50%;background:rgba(255,102,0,.1);display:flex;align-items:center;justify-content:center;color:var(--saffron);font-size:.95rem;flex-shrink:0}
+.c-title{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-lt);margin-bottom:4px}
+.c-text{font-family:var(--ff-sub);font-size:.95rem;color:var(--text);line-height:1.5}
+.wa-btn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:12px 22px;border-radius:50px;font-weight:700;font-size:.82rem;transition:var(--tr);margin-top:14px;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.wa-btn:hover{background:#1fba59;transform:translateY(-2px)}
+.map-box{border-radius:14px;border:1.5px solid var(--border);height:200px;background:linear-gradient(145deg,var(--cream),var(--warm));display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;position:relative;margin-top:18px;overflow:hidden;box-shadow:var(--shadow)}
+.map-box::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(139,0,0,.07) 1px,transparent 1px);background-size:22px 22px}
+.map-pin{font-size:2.6rem;position:relative;z-index:1}
+.map-label{font-family:var(--ff-sub);font-size:.95rem;color:var(--text-m);position:relative;z-index:1;text-align:center;padding:0 16px}
+.cf-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:34px;box-shadow:var(--shadow-lg)}
+.cf-title{font-family:var(--ff-head);font-size:1.4rem;color:var(--text);margin-bottom:22px}
+.cf-title em{font-style:italic;font-family:var(--ff-sub);color:var(--saffron)}
+#c-ok{display:none;color:var(--green);font-size:.83rem;margin-top:10px;font-weight:700}
+
+/* CART */
+#cart-overlay{position:fixed;inset:0;background:rgba(44,21,0,.6);z-index:1800;opacity:0;pointer-events:none;transition:opacity .3s}
+#cart-overlay.open{opacity:1;pointer-events:all}
+#cart-sidebar{position:fixed;top:0;right:0;width:380px;height:100vh;background:var(--ivory);border-left:2px solid var(--warm);z-index:1900;transform:translateX(100%);transition:transform .4s ease;display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(139,0,0,.15)}
+#cart-sidebar.open{transform:translateX(0)}
+.cart-hd{padding:22px;border-bottom:2px solid var(--warm);display:flex;align-items:center;justify-content:space-between;background:#fff}
+.cart-title-text{font-family:var(--ff-head);font-size:1.2rem;color:var(--text)}
+.cart-close-btn{color:var(--text-lt);font-size:1.1rem;transition:color .3s}
+.cart-close-btn:hover{color:var(--saffron)}
+.cart-items-wrap{flex:1;overflow-y:auto;padding:16px 22px}
+.cart-empty-box{text-align:center;padding:48px 16px;color:var(--text-lt)}
+.cart-empty-icon{font-size:2.8rem;margin-bottom:12px}
+.cart-empty-txt{font-family:var(--ff-sub);font-size:1.05rem}
+.cart-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.ci-emoji{width:48px;height:48px;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+.ci-info{flex:1}
+.ci-name{font-size:.85rem;font-weight:700;color:var(--text);margin-bottom:2px}
+.ci-price{font-size:.8rem;color:var(--saffron);font-weight:700}
+.ci-qty{display:flex;align-items:center;gap:8px}
+.qty-btn{width:27px;height:27px;border-radius:50%;background:var(--cream);border:1.5px solid var(--border);color:var(--text);font-size:.82rem;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:var(--tr);font-weight:700}
+.qty-btn:hover{background:var(--saffron);color:#fff;border-color:var(--saffron)}
+.qty-num{font-size:.88rem;font-weight:700;color:var(--text);min-width:18px;text-align:center}
+.cart-ft{padding:18px 22px;border-top:2px solid var(--warm);background:#fff}
+.cart-total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.cart-total-label{font-size:.8rem;color:var(--text-lt);text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.cart-total-val{font-family:var(--ff-sub);font-size:1.35rem;color:var(--saffron);font-weight:600}
+.cart-wa-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;padding:13px;border-radius:50px;font-weight:700;font-size:.84rem;margin-bottom:9px;transition:var(--tr);cursor:pointer;border:none;font-family:var(--ff-body);box-shadow:0 4px 12px rgba(37,211,102,.3)}
+.cart-wa-btn:hover{background:#1fba59}
+.cart-checkout-btn{width:100%;padding:13px;justify-content:center;border-radius:50px}
+
+/* TOAST */
+#toast{position:fixed;bottom:26px;right:26px;z-index:9000;background:#fff;border:1.5px solid var(--saffron);border-radius:14px;padding:13px 18px;transform:translateY(90px);opacity:0;transition:all .4s ease;display:flex;align-items:center;gap:11px;max-width:310px;pointer-events:none;box-shadow:var(--shadow-lg)}
+#toast.show{transform:translateY(0);opacity:1}
+
+/* FOOTER */
+footer{background:var(--brown);padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.footer-logo{font-family:var(--ff-head);font-size:1.7rem;color:var(--saffron-l);margin-bottom:2px}
+.footer-tagline{font-family:var(--ff-sub);font-size:.84rem;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:14px}
+.footer-txt{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:18px}
+.footer-social{display:flex;gap:9px}
+.soc-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.8rem;transition:var(--tr)}
+.soc-btn:hover{border-color:var(--saffron-l);color:var(--saffron-l)}
+.footer-head{font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--saffron-l);margin-bottom:14px}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:.8rem;color:rgba(255,255,255,.45);transition:color .3s,padding-left .3s}
+.footer-links a:hover{color:#fff;padding-left:4px}
+.footer-hours{display:flex;flex-direction:column;gap:6px}
+.fh-row{display:flex;justify-content:space-between;gap:12px;font-size:.76rem}
+.fh-day{color:rgba(255,255,255,.45)}.fh-time{color:#fff;font-weight:700}
+.footer-bottom{margin-top:48px;border-top:1px solid rgba(255,255,255,.1);padding:18px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:.76rem;color:rgba(255,255,255,.35)}
+.footer-bl{display:flex;gap:18px}
+.footer-bl a{font-size:.76rem;color:rgba(255,255,255,.35);transition:color .3s}
+.footer-bl a:hover{color:#fff}
+
+/* VEG LOGO */
+.veg-logo{display:inline-flex;align-items:center;gap:5px;background:#fff;border:2px solid var(--green);border-radius:4px;padding:3px 8px;font-size:10px;font-weight:700;color:var(--green);margin-left:8px;vertical-align:middle}
+.veg-logo-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+  .nav-links,.nav-reserve-btn{display:none}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid,.about-story-grid,.res-grid{grid-template-columns:1fr}
+  .about-visual{height:300px;order:-1}
+  .thali-grid,.chefs-grid{grid-template-columns:repeat(2,1fr)}
+  .testi-card{flex:0 0 calc(50% - 15px)}
+  .vals-grid,.contact-grid{grid-column:1fr}
+  .menu-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .nl-inner{flex-direction:column}
+}
+@media(max-width:600px){
+  :root{--nav-h:60px}
+  .section{padding:56px 0}
+  .feat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.2)}
+  .thali-grid,.chefs-grid,.vals-grid{grid-template-columns:1fr}
+  .testi-card{flex:0 0 calc(100% - 15px)}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  #cart-sidebar{width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .gal-grid{grid-template-columns:1fr}
+  .nl-row{flex-direction:column}
+  .nl-input{width:100%;border-right:1.5px solid rgba(255,255,255,.3);border-radius:50px}
+  .nl-btn{border-radius:50px}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo-wrap" data-page="home">
+      <div class="nav-logo-main">Shahi Bhoj</div>
+      <div class="nav-logo-sub">Royal Thali &middot; Aurangabad</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#" data-page="home" class="active">Home</a></li>
+      <li><a href="#" data-page="menu">Menu</a></li>
+      <li><a href="#" data-page="about">About</a></li>
+      <li><a href="#" data-page="gallery">Gallery</a></li>
+      <li><a href="#" data-page="contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="nav-cart" id="cart-toggle-btn" aria-label="Cart">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-badge" id="cart-badge">0</span>
+      </button>
+      <a href="#" class="btn btn-primary nav-reserve-btn" data-page="reservation">Book Table</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div id="mob-menu">
+  <a href="#" data-page="home">Home</a>
+  <a href="#" data-page="menu">Menu</a>
+  <a href="#" data-page="about">About Us</a>
+  <a href="#" data-page="gallery">Gallery</a>
+  <a href="#" data-page="contact">Contact</a>
+  <a href="#" data-page="reservation" class="btn btn-primary mob-res">Book Table</a>
+</div>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <section id="hero">
+    <div class="hero-mandala"></div><div class="hero-mandala2"></div><div class="hero-dots-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-crown"></i> Royal Thali Experience
+          <span class="hero-veg-badge"><span class="hero-veg-dot"></span> 100% Veg</span>
+        </div>
+        <h1 class="hero-title">Shahi Bhoj<br><em>Royal Unlimited Thali</em></h1>
+        <p class="hero-desc">Authentic Rajasthani, Gujarati &amp; Maharashtrian Thali — Unlimited Servings, Royal Taste, Pocket-Friendly Price. Aurangabad's most loved thali restaurant!</p>
+        <div class="hero-btns">
+          <a href="#" class="btn btn-primary" data-page="reservation"><i class="fas fa-calendar-alt"></i> Book Table</a>
+          <a href="#" class="btn btn-outline" data-page="menu"><i class="fas fa-utensils"></i> View Thali Menu</a>
+        </div>
+        <div class="hero-info-pills">
+          <div class="hero-pill"><i class="fas fa-rupee-sign"></i> ₹360/person</div>
+          <div class="hero-pill"><i class="fas fa-infinity"></i> Unlimited Refills</div>
+          <div class="hero-pill"><i class="fas fa-star"></i> 4.3★ Rating</div>
+          <div class="hero-pill"><i class="fas fa-child"></i> Kids Free (under 4)</div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-thali-card">
+          <span class="thali-emoji">&#127869;</span>
+          <div class="thali-card-title">Shahi Royal Thali</div>
+          <div class="thali-card-sub">Dal Baati &bull; Churma &bull; Gatte &bull; Aamras &bull; 20+ Items</div>
+          <div class="thali-price-box">
+            <span class="thali-price">&#8377;360</span>
+            <span class="thali-price-sub">/ person unlimited</span>
+          </div>
+          <div class="hero-items" style="margin-top:16px">
+            <div class="hitem"><span class="hitem-emoji">&#127858;</span><span class="hitem-text">Dal Baati Churma</span><span class="hitem-price">Included</span></div>
+            <div class="hitem"><span class="hitem-emoji">&#127859;</span><span class="hitem-text">Rajasthani Sabzis</span><span class="hitem-price">Unlimited</span></div>
+            <div class="hitem"><span class="hitem-emoji">&#127856;</span><span class="hitem-text">Desserts + Meetha</span><span class="hitem-price">Included</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee-bar"><div class="marquee-inner">
+    <span class="m-item">Unlimited Rajasthani Thali <span class="m-dot"></span></span>
+    <span class="m-item">100% Pure Vegetarian <span class="m-dot"></span></span>
+    <span class="m-item">Dal Baati Churma <span class="m-dot"></span></span>
+    <span class="m-item">Aamras in Season <span class="m-dot"></span></span>
+    <span class="m-item">Gujarati &amp; Maharashtrian Cuisine <span class="m-dot"></span></span>
+    <span class="m-item">Free Water Bottle <span class="m-dot"></span></span>
+    <span class="m-item">Complimentary Masala Pan <span class="m-dot"></span></span>
+    <span class="m-item">Kids Under 4 Free <span class="m-dot"></span></span>
+    <span class="m-item">Unlimited Rajasthani Thali <span class="m-dot"></span></span>
+    <span class="m-item">100% Pure Vegetarian <span class="m-dot"></span></span>
+    <span class="m-item">Dal Baati Churma <span class="m-dot"></span></span>
+    <span class="m-item">Aamras in Season <span class="m-dot"></span></span>
+    <span class="m-item">Gujarati &amp; Maharashtrian Cuisine <span class="m-dot"></span></span>
+    <span class="m-item">Free Water Bottle <span class="m-dot"></span></span>
+    <span class="m-item">Complimentary Masala Pan <span class="m-dot"></span></span>
+    <span class="m-item">Kids Under 4 Free <span class="m-dot"></span></span>
+  </div></div>
+
+  <div class="feat-bar"><div class="container"><div class="feat-grid">
+    <div class="feat-item reveal d1"><div class="feat-icon"><i class="fas fa-infinity"></i></div><div class="feat-title">Unlimited Thali</div><div class="feat-desc">Eat as much as you want, always</div></div>
+    <div class="feat-item reveal d2"><div class="feat-icon"><i class="fas fa-leaf"></i></div><div class="feat-title">100% Pure Veg</div><div class="feat-desc">No non-veg items, ever</div></div>
+    <div class="feat-item reveal d3"><div class="feat-icon"><i class="fas fa-rupee-sign"></i></div><div class="feat-title">₹360 Per Person</div><div class="feat-desc">Best value thali in Aurangabad</div></div>
+    <div class="feat-item reveal d4"><div class="feat-icon"><i class="fas fa-users"></i></div><div class="feat-title">Family Friendly</div><div class="feat-desc">Kids under 4 eat absolutely free</div></div>
+  </div></div></div>
+
+  <section class="section about-home"><div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal-l">
+        <div class="av-main">&#127859;</div>
+        <div class="av-accent">&#127868;</div>
+        <div class="av-badge"><div class="av-badge-num">8+</div><div class="av-badge-label">YEARS OF TASTE</div></div>
+      </div>
+      <div class="reveal-r">
+        <div class="section-label left">About Us</div>
+        <h2 class="section-title">Aurangabad Ka <em>Shahi Thali</em></h2>
+        <div class="divider"></div>
+        <div class="about-text">
+          <p>Shahi Bhoj is Aurangabad's most beloved thali destination — serving authentic Rajasthani, Gujarati &amp; Maharashtrian royal feasts since over 8 years. Our unlimited thali is packed with 20+ items including Dal Baati Churma, Gatte ki Sabzi, seasonal Aamras and much more!</p>
+          <p>Located near Inox Fame Tapadia, CIDCO N-1 — we have served lakhs of happy guests with our warm hospitality and consistent taste.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-num">6000+</div><div class="stat-label">5-Star Reviews</div></div>
+          <div class="stat-card"><div class="stat-num">4.3★</div><div class="stat-label">Google Rating</div></div>
+          <div class="stat-card"><div class="stat-num">20+</div><div class="stat-label">Thali Items</div></div>
+          <div class="stat-card"><div class="stat-num">8+</div><div class="stat-label">Years Serving</div></div>
+        </div>
+        <div style="margin-top:26px"><a href="#" class="btn btn-outline" data-page="about">Read Our Story</a></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="section thali-section"><div class="container">
+    <div class="text-center">
+      <div class="section-label">Our Specialties</div>
+      <h2 class="section-title">Popular <em>Thali Items</em></h2>
+      <div class="divider center"></div>
+      <p class="section-sub">From Dal Baati to Aamras — every item freshly made, served hot, unlimited times.</p>
+    </div>
+    <div class="thali-grid" id="featured-grid"></div>
+    <div class="text-center" style="margin-top:40px"><a href="#" class="btn btn-primary" data-page="menu">See Full Menu</a></div>
+  </div></section>
+
+  <section class="section testi-section"><div class="container">
+    <div class="text-center">
+      <div class="section-label">Guest Reviews</div>
+      <h2 class="section-title">What Our <em>Guests Say</em></h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="testi-slider"><div class="testi-track" id="testi-track"></div></div>
+    <div class="slider-btns">
+      <button class="sl-btn" id="sl-prev"><i class="fas fa-arrow-left"></i></button>
+      <button class="sl-btn" id="sl-next"><i class="fas fa-arrow-right"></i></button>
+    </div>
+  </div></section>
+
+  <div class="newsletter"><div class="container"><div class="nl-inner">
+    <div class="nl-text">
+      <div class="section-label">Stay Updated</div>
+      <h2 class="section-title">Get Special <em>Offers</em></h2>
+      <p class="section-sub">Festival thalis, new dishes, and exclusive member discounts — straight to your inbox.</p>
+    </div>
+    <div>
+      <form id="nl-form"><div class="nl-row">
+        <input type="email" class="nl-input" placeholder="Your email address" required>
+        <button type="submit" class="nl-btn">Subscribe</button>
+      </div></form>
+      <p id="nl-ok">&#10003; Done! You will get the best deals first.</p>
+    </div>
+  </div></div></div>
+</div>
+
+<!-- MENU PAGE -->
+<div id="page-menu" class="page">
+  <div class="page-hero">
+    <div class="ph-pattern"></div>
+    <div class="container ph-content">
+      <div class="section-label left">Pure Veg Menu</div>
+      <h1 class="section-title">Our <em>Thali Menu</em></h1>
+    </div>
+  </div>
+  <div class="menu-tabs" id="menu-tabs"></div>
+  <div class="menu-body"><div class="container" id="menu-content"></div></div>
+</div>
+
+<!-- ABOUT PAGE -->
+<div id="page-about" class="page">
+  <div class="page-hero">
+    <div class="ph-pattern"></div>
+    <div class="container ph-content">
+      <div class="section-label left">Our Heritage</div>
+      <h1 class="section-title">About <em>Shahi Bhoj</em></h1>
+    </div>
+  </div>
+  <section class="section" style="background:var(--ivory)"><div class="container">
+    <div class="about-story-grid">
+      <div class="reveal-l">
+        <div class="section-label left">Our Story</div>
+        <h2 class="section-title">A Royal <em>Dining Tradition</em></h2>
+        <div class="divider"></div>
+        <div class="story-text">
+          <p>Shahi Bhoj started with a simple dream — to bring the authentic flavors of Rajasthan to the heart of Aurangabad. What began as a humble thali restaurant has grown into one of the most celebrated dining destinations in Chhatrapati Sambhajinagar.</p>
+          <p>Our thali is a royal feast — combining the best of Rajasthani (Dal Baati Churma, Gatte, Ker Sangri), Gujarati (Kadhi, Dhokla, Farsan), and Maharashtrian (Puran Poli, Amti, Bhakri) cuisines in one unlimited spread.</p>
+          <p>With over 6,000 five-star reviews and a loyal fanbase, Shahi Bhoj continues to serve with love, warmth, and the promise of an unforgettable meal.</p>
+        </div>
+        <a href="#" class="btn btn-primary" data-page="reservation">Book Your Table</a>
+      </div>
+      <div class="visual-block reveal-r">&#127869;</div>
+    </div>
+  </div></section>
+  <section class="section" style="background:var(--cream)"><div class="container">
+    <div class="text-center"><div class="section-label">The Team</div><h2 class="section-title">Our <em>Kitchen Team</em></h2><div class="divider center"></div></div>
+    <div class="chefs-grid">
+      <div class="chef-card reveal d1"><div class="chef-img">&#128104;&#8205;&#127859;</div><div class="chef-body"><div class="chef-name">Ramji Bhai</div><div class="chef-title">Head Chef – Rajasthani</div><div class="chef-bio">35 years of experience in authentic Rajasthani cuisine. Dal Baati Churma is his specialty and guests come just for it!</div></div></div>
+      <div class="chef-card reveal d2"><div class="chef-img">&#128105;&#8205;&#127859;</div><div class="chef-body"><div class="chef-name">Savita Tai</div><div class="chef-title">Head Chef – Maharashtrian</div><div class="chef-bio">Born and raised in Pune, Savita Tai brings the true taste of Maharashtra to every plate with her puran poli and amti.</div></div></div>
+      <div class="chef-card reveal d3"><div class="chef-img">&#129489;&#8205;&#127859;</div><div class="chef-body"><div class="chef-name">Dinesh Bhai</div><div class="chef-title">Head Chef – Gujarati</div><div class="chef-bio">A master of Gujarati flavors — his kadhi, undhiyu, and fafda are the highlight of every Gujarati thali session.</div></div></div>
+    </div>
+  </div></section>
+  <section class="section" style="background:var(--ivory)"><div class="container">
+    <div class="text-center"><div class="section-label">Our Promise</div><h2 class="section-title">Why <em>Shahi Bhoj?</em></h2><div class="divider center"></div></div>
+    <div class="vals-grid">
+      <div class="val-card reveal d1"><div class="val-icon">&#127807;</div><div class="val-title">100% Pure Veg</div><div class="val-text">We are a strictly pure vegetarian restaurant. No eggs, no non-veg — ever. Safe for all communities and Jain-friendly options available.</div></div>
+      <div class="val-card reveal d2"><div class="val-icon">&#128154;</div><div class="val-title">Fresh Daily</div><div class="val-text">Everything is cooked fresh every day. No reheated food, no stale items. What you get is made that morning with love.</div></div>
+      <div class="val-card reveal d3"><div class="val-icon">&#128176;</div><div class="val-title">Best Value</div><div class="val-text">At just ₹360 per person, our unlimited thali is the best value fine dining in Aurangabad. Kids under 4 eat absolutely free.</div></div>
+      <div class="val-card reveal d1"><div class="val-icon">&#9889;</div><div class="val-title">Fast Service</div><div class="val-text">Our experienced team serves 100+ guests simultaneously without compromising on speed, warmth, or quality.</div></div>
+      <div class="val-card reveal d2"><div class="val-icon">&#128116;</div><div class="val-title">Royal Ambience</div><div class="val-text">Rajasthani-themed decor, staff in traditional attire — dining at Shahi Bhoj feels like a royal experience every time.</div></div>
+      <div class="val-card reveal d3"><div class="val-icon">&#127942;</div><div class="val-title">4.3★ Rated</div><div class="val-text">Over 6,000 Google reviews and consistently rated 4.3 stars. Our guests love us and they come back again and again.</div></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- RESERVATION PAGE -->
+<div id="page-reservation" class="page">
+  <div class="page-hero">
+    <div class="ph-pattern"></div>
+    <div class="container ph-content">
+      <div class="section-label left">Reserve Your Seat</div>
+      <h1 class="section-title">Book a <em>Table</em></h1>
+    </div>
+  </div>
+  <section class="section" style="background:var(--ivory)"><div class="container">
+    <div class="res-grid">
+      <div class="reveal-l">
+        <div class="section-label left">Timings & Info</div>
+        <h2 class="section-title">Plan Your <em>Visit</em></h2>
+        <div class="divider"></div>
+        <div class="res-info"><p>We recommend booking in advance especially on weekends — Shahi Bhoj fills up fast! Walk-ins always welcome but seating may take time on busy days.</p></div>
+        <div class="res-details">
+          <div class="res-detail"><div class="rd-icon"><i class="fas fa-clock"></i></div><div><div class="rd-title">Lunch</div><div class="rd-text">Daily: 12:00 PM – 3:30 PM</div></div></div>
+          <div class="res-detail"><div class="rd-icon"><i class="fas fa-moon"></i></div><div><div class="rd-title">Dinner</div><div class="rd-text">Daily: 7:00 PM – 10:30 PM</div></div></div>
+          <div class="res-detail"><div class="rd-icon"><i class="fas fa-rupee-sign"></i></div><div><div class="rd-title">Pricing</div><div class="rd-text">₹360/person unlimited &bull; Kids under 4: FREE &bull; Free water bottle &amp; masala pan</div></div></div>
+          <div class="res-detail"><div class="rd-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="rd-title">Location</div><div class="rd-text">C-2, Town Centre, Near Inox Fame Tapadia, Jalgaon Road, CIDCO N-1, Aurangabad – 431006</div></div></div>
+          <div class="res-detail"><div class="rd-icon"><i class="fas fa-phone"></i></div><div><div class="rd-title">Phone</div><div class="rd-text">+91 80077 08060</div></div></div>
+        </div>
+      </div>
+      <div class="reveal-r"><div class="res-form-card">
+        <div class="section-label left" style="margin-bottom:20px">Book Your Table</div>
+        <form id="res-form">
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" placeholder="Your Name" required></div>
+            <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required></div>
+            <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" placeholder="your@email.com"></div>
+            <div class="form-group"><label class="form-label">Date</label><input type="date" class="form-input" id="res-date" required></div>
+            <div class="form-group"><label class="form-label">Session</label><select class="form-select" required><option value="">Select</option><option>Lunch (12 PM – 3:30 PM)</option><option>Dinner (7 PM – 10:30 PM)</option></select></div>
+            <div class="form-group"><label class="form-label">Guests</label><select class="form-select" required><option value="">Select</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10+</option></select></div>
+            <div class="form-group full"><label class="form-label">Special Requests</label><textarea class="form-textarea" placeholder="Jain food, wheelchair access, birthday celebration..."></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit"><i class="fas fa-calendar-check"></i> Confirm Booking</button>
+        </form>
+        <div class="confirm-msg" id="confirm-msg">
+          <div class="confirm-icon"><i class="fas fa-check"></i></div>
+          <div class="confirm-title">Table Booked!</div>
+          <div class="confirm-text">Shukriya! Your table is confirmed. We will call you to reconfirm. We look forward to serving you a royal thali!</div>
+          <button class="btn btn-outline" id="res-reset-btn">Book Another</button>
+        </div>
+      </div></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- GALLERY PAGE -->
+<div id="page-gallery" class="page">
+  <div class="page-hero">
+    <div class="ph-pattern"></div>
+    <div class="container ph-content">
+      <div class="section-label left">Visual Feast</div>
+      <h1 class="section-title">Our <em>Gallery</em></h1>
+    </div>
+  </div>
+  <div style="background:var(--ivory)"><div class="container">
+    <div class="gal-filter" id="gal-filter">
+      <button class="gfbtn active" data-filter="all">All</button>
+      <button class="gfbtn" data-filter="food">Food</button>
+      <button class="gfbtn" data-filter="ambience">Ambience</button>
+      <button class="gfbtn" data-filter="events">Events</button>
+    </div>
+    <div class="gal-grid" id="gal-grid"></div>
+  </div></div>
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="page-contact" class="page">
+  <div class="page-hero">
+    <div class="ph-pattern"></div>
+    <div class="container ph-content">
+      <div class="section-label left">Reach Us</div>
+      <h1 class="section-title">Contact <em>Us</em></h1>
+    </div>
+  </div>
+  <div style="background:var(--ivory)"><div class="container contact-wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="c-cards">
+          <div class="c-card reveal d1"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="c-title">Address</div><div class="c-text">C-2, Town Centre, Near Inox Fame Tapadia,<br>CIDCO N-1, Aurangabad – 431006</div></div></div>
+          <div class="c-card reveal d2"><div class="c-icon"><i class="fas fa-phone-alt"></i></div><div><div class="c-title">Phone</div><div class="c-text">+91 80077 08060<br>+91 73830 24278</div></div></div>
+          <div class="c-card reveal d3"><div class="c-icon"><i class="fas fa-clock"></i></div><div><div class="c-title">Timings</div><div class="c-text">Lunch: 12:00 PM – 3:30 PM<br>Dinner: 7:00 PM – 10:30 PM (Daily)</div></div></div>
+          <div class="c-card reveal d4"><div class="c-icon"><i class="fas fa-rupee-sign"></i></div><div><div class="c-title">Pricing</div><div class="c-text">₹360/person &bull; Unlimited Thali<br>Kids under 4 eat FREE</div></div></div>
+        </div>
+        <a href="https://wa.me/918007708060?text=Hello%20Shahi%20Bhoj!%20I%20want%20to%20book%20a%20table." target="_blank" class="wa-btn"><i class="fab fa-whatsapp" style="font-size:1.1rem"></i> Book via WhatsApp</a>
+        <div class="map-box">
+          <div class="map-pin">&#128205;</div>
+          <div class="map-label">Near Inox Fame Tapadia, CIDCO N-1<br>Aurangabad, Maharashtra</div>
+        </div>
+      </div>
+      <div class="cf-card reveal-r">
+        <div class="cf-title">Send Us a <em>Message</em></div>
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="form-group"><label class="form-label">Name</label><input type="text" class="form-input" placeholder="Aapka naam" required></div>
+            <div class="form-group"><label class="form-label">Phone</label><input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required></div>
+            <div class="form-group full"><label class="form-label">Subject</label><input type="text" class="form-input" placeholder="Reservation / Feedback / Query" required></div>
+            <div class="form-group full"><label class="form-label">Message</label><textarea class="form-textarea" style="min-height:120px" placeholder="Aap kya poochna chahte hain..." required></textarea></div>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" style="margin-top:12px"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <p id="c-ok">&#10003; Message received! We will reply within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- CART -->
+<div id="cart-overlay"></div>
+<div id="cart-sidebar">
+  <div class="cart-hd">
+    <div class="cart-title-text">Your Order</div>
+    <button class="cart-close-btn" id="cart-close-btn"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items-wrap" id="cart-items-wrap">
+    <div class="cart-empty-box"><div class="cart-empty-icon">&#127869;</div><div class="cart-empty-txt">Add items to order</div></div>
+  </div>
+  <div class="cart-ft" id="cart-ft" style="display:none">
+    <div class="cart-total-row"><div class="cart-total-label">Total</div><div class="cart-total-val" id="cart-total-val">&#8377;0</div></div>
+    <button class="cart-wa-btn" id="cart-wa-btn"><i class="fab fa-whatsapp"></i> Order via WhatsApp</button>
+    <button class="btn btn-primary cart-checkout-btn" id="checkout-btn"><i class="fas fa-check-circle"></i> Confirm Order</button>
+  </div>
+</div>
+
+<div id="toast">
+  <span style="font-size:1.3rem">&#9989;</span>
+  <div><div style="font-size:.86rem;font-weight:700;color:var(--text)" id="toast-title">Added!</div><div style="font-size:.76rem;color:var(--text-lt)" id="toast-sub">Item added.</div></div>
+</div>
+
+<footer><div class="container">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Shahi Bhoj</div>
+      <div class="footer-tagline">Royal Unlimited Thali — Aurangabad</div>
+      <p class="footer-txt">Authentic Rajasthani, Gujarati &amp; Maharashtrian unlimited thali near Inox Fame Tapadia, CIDCO N-1, Aurangabad. Pure Veg. 100% Fresh. 4.3★ rated.</p>
+      <div class="footer-social">
+        <a href="#" class="soc-btn"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="soc-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="soc-btn"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="soc-btn"><i class="fab fa-google"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-head">Navigate</div>
+      <ul class="footer-links">
+        <li><a href="#" data-page="home">Home</a></li>
+        <li><a href="#" data-page="menu">Thali Menu</a></li>
+        <li><a href="#" data-page="about">About Us</a></li>
+        <li><a href="#" data-page="gallery">Gallery</a></li>
+        <li><a href="#" data-page="reservation">Book Table</a></li>
+        <li><a href="#" data-page="contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-head">Our Thalis</div>
+      <ul class="footer-links">
+        <li><a href="#">Rajasthani Thali</a></li>
+        <li><a href="#">Gujarati Thali</a></li>
+        <li><a href="#">Maharashtrian Thali</a></li>
+        <li><a href="#">Jain Special Thali</a></li>
+        <li><a href="#">Festival Thali</a></li>
+        <li><a href="#">Party Bookings</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-head">Timings</div>
+      <div class="footer-hours">
+        <div class="fh-row"><span class="fh-day">Lunch</span><span class="fh-time">12:00–3:30 PM</span></div>
+        <div class="fh-row"><span class="fh-day">Dinner</span><span class="fh-time">7:00–10:30 PM</span></div>
+        <div class="fh-row"><span class="fh-day">All Days</span><span class="fh-time">Open Daily</span></div>
+      </div>
+      <div style="margin-top:18px"><div class="footer-head">Call Us</div><div style="font-family:var(--ff-sub);font-size:1rem;color:var(--saffron-l)">+91 80077 08060</div></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2024 Shahi Bhoj Thali Restaurant, Aurangabad. All rights reserved.</div>
+    <div class="footer-bl"><a href="#">Privacy</a><a href="#">Terms</a></div>
+  </div>
+</div></footer>
+
+<script>
+(function(){
+'use strict';
+
+var menuData={
+  thali:[
+    {e:'&#127869;',n:'Shahi Royal Thali',d:'Unlimited Rajasthani, Gujarati & Maharashtrian thali — Dal Baati, Gatte Sabzi, 2 Sweets, Salad, Papad, Roti, Rice, Chaas',p:360,b:'Bestseller'},
+    {e:'&#127869;',n:'Jain Special Thali',d:'No onion, no garlic, no root vegetables — specially prepared for Jain guests with all traditional flavors intact',p:360,b:'Jain'},
+    {e:'&#127869;',n:'Kids Thali',d:'Smaller portions for children (4-10 years) — Roti, Dal, Rice, Sabzi, Sweet, Curd',p:180,b:'Kids'},
+    {e:'&#127869;',n:'Aamras Special Thali',d:'Regular Shahi Thali + Extra Aamras (Alphonso Mango Pulp) — available in mango season only',p:400,b:'Seasonal'}
+  ],
+  starters:[
+    {e:'&#127828;',n:'Chaat Papdi',d:'Crispy papdi with chana, curd, tamarind chutney, green chutney and sev — served as part of thali starters',p:0,b:'Included'},
+    {e:'&#127826;',n:'Veg Cutlet',d:'Spiced mixed vegetable patties, pan-fried golden, served with mint chutney',p:0,b:'Included'},
+    {e:'&#127837;',n:'Soup of the Day',d:'Fresh seasonal vegetable soup — changes daily based on market availability',p:0,b:'Included'},
+    {e:'&#129361;',n:'Farsan Platter',d:'Gujarati-style dhokla, khandvi, fafda — served crisp and fresh as part of thali',p:0,b:'Included'}
+  ],
+  mains:[
+    {e:'&#127858;',n:'Dal Baati Churma',d:'Crispy wheat baati baked in ghee, served with spiced dal and sweet churma — Rajasthan\'s pride',p:0,b:'Signature'},
+    {e:'&#127826;',n:'Gatte ki Sabzi',d:'Gram flour dumplings in tangy, spiced yogurt gravy — authentic Rajasthani flavor',p:0,b:'Must Try'},
+    {e:'&#127833;',n:'Ker Sangri',d:'Dried desert berries and beans cooked with Rajasthani spices — a rare traditional delicacy',p:0,b:'Traditional'},
+    {e:'&#127825;',n:'Panchmel Dal',d:'Five lentils slow-cooked with whole spices and tempered with ghee and hing',p:0,b:'Included'},
+    {e:'&#127810;',n:'Seasonal Sabzi',d:'2 fresh vegetable curries prepared daily with market-fresh vegetables and house spices',p:0,b:'Included'},
+    {e:'&#127864;',n:'Kadhi',d:'Gujarati-style sweet and tangy besan kadhi, tempered with mustard and curry leaves',p:0,b:'Gujarati'},
+    {e:'&#127859;',n:'Amti',d:'Traditional Maharashtrian sweet-sour-spicy dal — made with toor dal and goda masala',p:0,b:'Maharashtrian'},
+    {e:'&#127868;',n:'Puran Poli',d:'Sweet stuffed flatbread with chana dal and jaggery filling — Maharashtrian classic',p:0,b:'Maharashtrian'},
+    {e:'&#129379;',n:'Missi Roti / Bajra Roti',d:'Nutritious multi-grain rotis served piping hot with dollop of white butter',p:0,b:'Included'},
+    {e:'&#127859;',n:'Steamed Rice / Jeera Rice',d:'Perfectly cooked basmati rice or aromatic jeera rice — unlimited refills',p:0,b:'Unlimited'},
+    {e:'&#127858;',n:'Dahi / Curd',d:'Fresh home-style thick curd — palate cleanser between courses',p:0,b:'Included'},
+    {e:'&#127869;',n:'Salad & Papad',d:'Fresh onion-tomato-lemon salad with assorted roasted and fried papads',p:0,b:'Included'}
+  ],
+  desserts:[
+    {e:'&#127843;',n:'Gulab Jamun',d:'Soft mawa balls soaked in rose-flavored sugar syrup — served warm',p:0,b:'Included'},
+    {e:'&#127854;',n:'Gajar Halwa',d:'Slow-cooked carrot halwa with khoya, sugar and cardamom — seasonal specialty',p:0,b:'Seasonal'},
+    {e:'&#127849;',n:'Jalebi & Rabdi',d:'Crispy spiral jalebis served hot with thick saffron-flavored rabdi',p:0,b:'Must Try'},
+    {e:'&#127861;',n:'Aamras',d:'Pure Alphonso mango pulp — the star of summer. Thick, sweet, and absolutely divine',p:0,b:'Seasonal'},
+    {e:'&#127862;',n:'Basundi',d:'Rich condensed sweetened milk with saffron, cardamom and dry fruits',p:0,b:'Included'},
+    {e:'&#127866;',n:'Chaas / Buttermilk',d:'Refreshing spiced buttermilk — the perfect ending to a royal feast',p:0,b:'Included'},
+    {e:'&#127851;',n:'Masala Pan',d:'Complimentary Meetha Pan with betel nut, gulkand and fennel seeds — a gift from us!',p:0,b:'Complimentary'}
+  ],
+  extras:[
+    {e:'&#127861;',n:'Extra Aamras (250ml)',d:'Pure Alphonso mango pulp extra serving — available during mango season',p:60,b:'Seasonal'},
+    {e:'&#127853;',n:'Badam Milk',d:'Chilled almond milk with saffron and cardamom — house special',p:80,b:'Popular'},
+    {e:'&#127866;',n:'Masala Chaas (500ml)',d:'Large serving of spiced buttermilk — great for summer',p:40,b:null},
+    {e:'&#9749;',n:'Masala Chai',d:'Traditional Indian spiced tea with ginger, cardamom and tulsi',p:30,b:null},
+    {e:'&#127849;',n:'Extra Jalebi (100g)',d:'Fresh crispy jalebis for the sweet tooth — extra serving',p:50,b:'Popular'},
+    {e:'&#127828;',n:'Extra Baati (4 pcs)',d:'Freshly baked ghee baatis — extra serving for baati lovers',p:80,b:null}
+  ]
+};
+
+var featured=[
+  {e:'&#127869;',n:'Shahi Royal Thali',d:'Unlimited Dal Baati, Gatte, 2 Sabzis, Sweet, Roti, Rice, Chaas and more',p:360,b:'Bestseller',cat:'Thali'},
+  {e:'&#127858;',n:'Dal Baati Churma',d:'Rajasthan ka pride — ghee-baked baati with spiced dal and churma',p:0,b:'Signature',cat:'Main Course'},
+  {e:'&#127849;',n:'Jalebi & Rabdi',d:'Crispy hot jalebis with thick saffron rabdi — divine combination',p:0,b:'Must Try',cat:'Dessert'},
+  {e:'&#127861;',n:'Aamras Special',d:'Pure Alphonso mango pulp thali — the taste of summer royalty',p:400,b:'Seasonal',cat:'Thali'},
+  {e:'&#129361;',n:'Gujarati Farsan',d:'Dhokla, khandvi, fafda — authentic Gujarati starters in thali',p:0,b:'Included',cat:'Starter'},
+  {e:'&#127854;',n:'Gajar Halwa',d:'Slow-cooked carrot halwa with khoya and cardamom',p:0,b:'Seasonal',cat:'Dessert'}
+];
+
+var testimonials=[
+  {t:'All in one meal options available here. ₹360 per person. No charge for kids below 4. Unlimited food. Good quality. Fast service. Free water bottle. Complimentary masala pan. Good atmosphere!',n:'Sachin Ghuge',r:'Regular Guest, Aurangabad',s:5},
+  {t:'Best restaurants in Aurangabad. All types of Maharashtrian food is available. Sitting arrangement is excellent. Best food served to the people. More than 100 people can dine at one time!',n:'Ravindra Sonwane',r:'Food Lover, Aurangabad',s:5},
+  {t:'Awesome place to enjoy a perfect Rajasthani Thali at a moderate cost. The Dal Baati Churma is absolutely outstanding. Service is very quick and staff is very friendly.',n:'Anandan E.',r:'Verified Guest',s:5},
+  {t:'Good place to have Lunch or dinner. Costs around ₹370 per plate with all variety of food. Service is super fast. The Aamras during season is just outstanding. Highly recommended!',n:'Vaibhav Joshi',r:'Food Blogger, Aurangabad',s:5},
+  {t:'Extended thali with loads of variety. Food: 5 stars, Service: 5 stars, Atmosphere: 5 stars! The thali size itself made me feel full before even starting. Exceptional value for money!',n:'Verified Guest',r:'TripAdvisor Review',s:5}
+];
+
+var galleryItems=[
+  {e:'&#127869;',cat:'food',bg:'linear-gradient(135deg,#FFE0B2,#FFCC80)'},
+  {e:'&#127968;',cat:'ambience',bg:'linear-gradient(135deg,#FFF3E0,#FFE0B2)'},
+  {e:'&#127858;',cat:'food',bg:'linear-gradient(135deg,#FFECB3,#FFE082)'},
+  {e:'&#127813;',cat:'ambience',bg:'linear-gradient(135deg,#F3E5F5,#E1BEE7)'},
+  {e:'&#127861;',cat:'food',bg:'linear-gradient(135deg,#FFF9C4,#FFF176)'},
+  {e:'&#127881;',cat:'events',bg:'linear-gradient(135deg,#FCE4EC,#F8BBD9)'},
+  {e:'&#127849;',cat:'food',bg:'linear-gradient(135deg,#FFE0B2,#FFAB40)'},
+  {e:'&#127960;',cat:'ambience',bg:'linear-gradient(135deg,#E8F5E9,#C8E6C9)'},
+  {e:'&#127870;',cat:'events',bg:'linear-gradient(135deg,#FFF3E0,#FFD54F)'}
+];
+
+/* CART */
+var cart={};
+function addToCart(n,p,e){if(cart[n])cart[n].qty++;else cart[n]={n:n,p:p,e:e,qty:1};renderCart();showToast('Added!',n+' added to your order.');}
+function changeQty(n,d){if(!cart[n])return;cart[n].qty+=d;if(cart[n].qty<=0)delete cart[n];renderCart();}
+function renderCart(){var keys=Object.keys(cart),total=0,count=0;keys.forEach(function(k){count+=cart[k].qty;total+=cart[k].qty*cart[k].p;});var badge=document.getElementById('cart-badge');var wrap=document.getElementById('cart-items-wrap');var ft=document.getElementById('cart-ft');var tv=document.getElementById('cart-total-val');badge.textContent=count;badge.className=count>0?'cart-badge show':'cart-badge';tv.textContent='\u20B9'+total.toFixed(0);ft.style.display=count>0?'block':'none';if(count===0){wrap.innerHTML='<div class="cart-empty-box"><div class="cart-empty-icon">&#127869;</div><div class="cart-empty-txt">Add items to order</div></div>';return;}var html='';keys.forEach(function(k){var item=cart[k];html+='<div class="cart-item"><div class="ci-emoji">'+item.e+'</div><div class="ci-info"><div class="ci-name">'+item.n+'</div><div class="ci-price">\u20B9'+(item.p*item.qty).toFixed(0)+'</div></div><div class="ci-qty"><button class="qty-btn" data-name="'+k+'" data-delta="-1">-</button><div class="qty-num">'+item.qty+'</div><button class="qty-btn" data-name="'+k+'" data-delta="1">+</button></div></div>';});wrap.innerHTML=html;wrap.querySelectorAll('.qty-btn').forEach(function(btn){btn.addEventListener('click',function(){changeQty(btn.getAttribute('data-name'),parseInt(btn.getAttribute('data-delta')));});});}
+function openCart(){document.getElementById('cart-overlay').classList.add('open');document.getElementById('cart-sidebar').classList.add('open');}
+function closeCart(){document.getElementById('cart-overlay').classList.remove('open');document.getElementById('cart-sidebar').classList.remove('open');}
+
+var toastTimer;
+function showToast(title,sub){var t=document.getElementById('toast');document.getElementById('toast-title').textContent=title;document.getElementById('toast-sub').textContent=sub;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show');},2800);}
+
+function showPage(page){document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});var target=document.getElementById('page-'+page);if(target)target.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-page')===page);});document.getElementById('mob-menu').classList.remove('open');document.getElementById('hamburger').classList.remove('open');setTimeout(initReveal,100);}
+document.addEventListener('click',function(e){var el=e.target.closest('[data-page]');if(el){e.preventDefault();showPage(el.getAttribute('data-page'));}});
+
+window.addEventListener('scroll',function(){document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50);});
+document.getElementById('hamburger').addEventListener('click',function(){this.classList.toggle('open');document.getElementById('mob-menu').classList.toggle('open');});
+document.getElementById('cart-toggle-btn').addEventListener('click',openCart);
+document.getElementById('cart-close-btn').addEventListener('click',closeCart);
+document.getElementById('cart-overlay').addEventListener('click',closeCart);
+document.getElementById('cart-wa-btn').addEventListener('click',function(){window.open('https://wa.me/918007708060?text=Namaste!%20I%20want%20to%20place%20an%20order%20at%20Shahi%20Bhoj.','_blank');});
+document.getElementById('checkout-btn').addEventListener('click',function(){cart={};renderCart();closeCart();showToast('Order Confirmed!','We will call you shortly to confirm.');});
+
+var bgPalette=['linear-gradient(135deg,#FFE8C0,#FFD090)','linear-gradient(135deg,#FFD0A0,#FFC070)','linear-gradient(135deg,#FFF0C0,#FFE080)','linear-gradient(135deg,#FFE0C0,#FFD0A0)','linear-gradient(135deg,#E8F5E0,#D0E8C0)','linear-gradient(135deg,#FFE8E0,#FFD0C0)'];
+function renderFeatured(){var grid=document.getElementById('featured-grid');if(!grid)return;var html='';featured.forEach(function(d,i){html+='<div class="thali-card reveal d'+((i%3)+1)+'" data-n="'+d.n+'" data-p="'+d.p+'" data-e="'+d.e+'">';html+='<div class="thali-img" style="background:'+bgPalette[i]+'"><div style="font-size:4rem">'+d.e+'</div>';if(d.b)html+='<div class="thali-tag'+(d.b==='Veg'||d.b==='Jain'?' veg':d.b==='Seasonal'?' new':'')+'">'+d.b+'</div>';html+='</div><div class="thali-body"><div class="thali-cat">'+d.cat+'</div><div class="thali-name">'+d.n+'</div><div class="thali-desc">'+d.d+'</div><div class="thali-foot"><div class="thali-price">'+(d.p>0?'\u20B9'+d.p:'Included')+'</div><button class="thali-add">+</button></div></div></div>';});grid.innerHTML=html;grid.querySelectorAll('.thali-card').forEach(function(c){c.addEventListener('click',function(){addToCart(c.getAttribute('data-n'),parseFloat(c.getAttribute('data-p')),c.getAttribute('data-e'));});});}
+
+function renderMenu(filter){filter=filter||'all';var tabs=document.getElementById('menu-tabs');var content=document.getElementById('menu-content');if(!tabs||!content)return;var cats=[{k:'thali',l:'Our Thalis'},{k:'starters',l:'Starters'},{k:'mains',l:'Main Course'},{k:'desserts',l:'Desserts & Drinks'},{k:'extras',l:'Extras & Add-ons'}];var th='<button class="mtab '+(filter==='all'?'active':'')+'" data-mf="all">All</button>';cats.forEach(function(c){th+='<button class="mtab '+(filter===c.k?'active':'')+'" data-mf="'+c.k+'">'+c.l+'</button>';});tabs.innerHTML=th;tabs.querySelectorAll('.mtab').forEach(function(b){b.addEventListener('click',function(){renderMenu(b.getAttribute('data-mf'));});});var toR=filter==='all'?cats:cats.filter(function(c){return c.k===filter;});var ch='';toR.forEach(function(cat){ch+='<div class="menu-sec-title">'+cat.l+'</div><div class="menu-grid">';menuData[cat.k].forEach(function(item){var bc=item.b&&(item.b==='Jain'||item.b==='Veg')?'mi-badge veg':item.b==='Included'||item.b==='Complimentary'?'mi-badge veg':item.b==='Seasonal'?'mi-badge new':'mi-badge';ch+='<div class="menu-item" data-n="'+item.n+'" data-p="'+item.p+'" data-e="'+item.e+'"><div class="mi-emoji">'+item.e+'</div><div class="mi-info"><div class="mi-name">'+item.n+(item.b?'<span class="'+bc+'">'+item.b+'</span>':'')+'</div><div class="mi-desc">'+item.d+'</div><div class="mi-foot"><div class="mi-price">'+(item.p>0?'\u20B9'+item.p:'Included')+'</div><button class="mi-add">+ Add</button></div></div></div>';});ch+='</div>';});content.innerHTML=ch;content.querySelectorAll('.menu-item').forEach(function(item){item.addEventListener('click',function(){addToCart(item.getAttribute('data-n'),parseFloat(item.getAttribute('data-p')),item.getAttribute('data-e'));});});}
+
+var slideOff=0;
+function renderTestimonials(){var track=document.getElementById('testi-track');if(!track)return;var html='';testimonials.forEach(function(t){html+='<div class="testi-card"><div class="testi-stars">'+'&#9733;'.repeat(t.s)+'</div><div class="testi-text">"'+t.t+'"</div><div class="testi-author"><div class="testi-avatar">'+t.n[0]+'</div><div><div class="testi-name">'+t.n+'</div><div class="testi-role">'+t.r+'</div></div></div></div>';});track.innerHTML=html;}
+function applySlide(){var card=document.querySelector('.testi-card');if(!card)return;document.getElementById('testi-track').style.transform='translateX(-'+slideOff*(card.offsetWidth+30)+'px)';}
+function getVis(){return window.innerWidth<600?1:window.innerWidth<900?2:3;}
+document.getElementById('sl-next').addEventListener('click',function(){slideOff=Math.min(slideOff+1,testimonials.length-getVis());applySlide();});
+document.getElementById('sl-prev').addEventListener('click',function(){slideOff=Math.max(slideOff-1,0);applySlide();});
+
+function renderGallery(filter){var grid=document.getElementById('gal-grid');if(!grid)return;var items=filter==='all'?galleryItems:galleryItems.filter(function(i){return i.cat===filter;});var html='';items.forEach(function(item){html+='<div class="gal-item"><div class="gi-inner" style="background:'+item.bg+'">'+item.e+'</div><div class="gi-overlay"><i class="fas fa-search-plus gi-icon"></i></div></div>';});grid.innerHTML=html;}
+document.getElementById('gal-filter').addEventListener('click',function(e){var btn=e.target.closest('.gfbtn');if(!btn)return;document.querySelectorAll('.gfbtn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');renderGallery(btn.getAttribute('data-filter'));});
+
+document.getElementById('res-form').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('confirm-msg').classList.add('show');});
+document.getElementById('res-reset-btn').addEventListener('click',function(){document.getElementById('res-form').style.display='block';document.getElementById('res-form').reset();document.getElementById('confirm-msg').classList.remove('show');});
+document.getElementById('nl-form').addEventListener('submit',function(e){e.preventDefault();this.reset();document.getElementById('nl-ok').style.display='block';});
+document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();this.reset();document.getElementById('c-ok').style.display='block';});
+
+function initReveal(){var els=document.querySelectorAll('.reveal:not(.visible),.reveal-l:not(.visible),.reveal-r:not(.visible)');if(!els.length)return;var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target);}});},{threshold:0.1});els.forEach(function(el){obs.observe(el);});}
+
+var rd=document.getElementById('res-date');if(rd)rd.setAttribute('min',new Date().toISOString().split('T')[0]);
+renderFeatured();renderTestimonials();renderMenu('all');renderGallery('all');renderCart();initReveal();
+})();
+</script>
+</body>
+</html>
